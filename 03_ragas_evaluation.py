@@ -287,6 +287,14 @@ def main():
     print("  Saved data/ragas_report.json")
     print("=" * 60)
 
+    # Analysis: Why V2 scores higher on faithfulness
+    # V2 uses a structured step-by-step prompt that explicitly instructs the model
+    # to ground its answer in the retrieved context before writing. This reduces
+    # hallucination and unsupported claims, directly improving faithfulness.
+    # V1's concise style allows the model more freedom to draw on parametric
+    # knowledge, which hurts faithfulness but boosts answer_relevancy (shorter,
+    # more focused answers score higher when RAGAS generates synthetic questions).
+
 
 if __name__ == "__main__":
     main()

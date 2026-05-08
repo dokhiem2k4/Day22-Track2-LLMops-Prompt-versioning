@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: monospace; background: #1e1e1e; color: #d4d4d4; padding: 30px; }
+  h2 { color: #4ec9b0; }
+  table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+  th { background: #333; color: #9cdcfe; padding: 10px 16px; text-align: left; }
+  td { padding: 10px 16px; border-bottom: 1px solid #333; }
+  .target { color: #4ec9b0; font-weight: bold; }
+  .winner { color: #ce9178; }
+  .ok { background: #1a3a1a; color: #4ec9b0; padding: 12px 16px; margin-top: 16px; border-left: 4px solid #4ec9b0; }
+</style>
+</head>
+<body>
+<h2>RAGAS Evaluation Results — Day 22 Lab</h2>
+<table>
+  <tr><th>Metric</th><th>Prompt V1</th><th>Prompt V2</th><th>Winner</th></tr>
+  <tr>
+    <td>faithfulness</td>
+    <td>0.0000 (nan)</td>
+    <td class="target">0.8322 ✓</td>
+    <td class="winner">← V2</td>
+  </tr>
+  <tr>
+    <td>answer_relevancy</td>
+    <td class="target">0.9249</td>
+    <td>0.9059</td>
+    <td class="winner">← V1</td>
+  </tr>
+  <tr>
+    <td>context_recall</td>
+    <td>0.8300</td>
+    <td>0.8300</td>
+    <td>tie</td>
+  </tr>
+  <tr>
+    <td>context_precision</td>
+    <td>0.9467</td>
+    <td>0.9467</td>
+    <td>tie</td>
+  </tr>
+</table>
+<div class="ok">[OK] Target met: V2 faithfulness = 0.8322 &ge; 0.8</div>
+</body>
+</html>
